@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Add New Product</title>
+</head>
+<body>
+	<div align="left">
+		<h1 style="background-color:#FFF2CC;">Add New Product</h1>
+		<br/>
+		<form action="#" th:action="@{/save}" th:object="${product}" method="post">
+			<table border="0" cellpadding="10">
+				<tr>
+					<td>Porduct Name</td>
+					<td><input type="text" th:field="*{name}"  placeholder="Enter a Product Name"/></td>
+				</tr>
+				<tr>
+					<td>Company Name</td>
+					<td><input type="text" th:field="*{brand}" placeholder="Enter a Brand Name" /></td>
+				</tr>				
+				<tr>
+					<td>Quantity</td>
+					<td><input type="text" th:field="*{madein}" placeholder=" Enter a Quantity"/></td>
+				</tr>				
+				<tr>
+					<td>Unit Price</td>
+					<td><input type="text" th:field="*{price}" placeholder="Enter a Price"/></td>
+				</tr>				
+				<tr>
+					<td colspan="2" ><button type="submit" style="background-color:#9999ff; width:70px; height:50px;"><h3>Save</h3></button></td>
+				</tr>
+				<tr>
+					<td>
+						<button style="background-color:#9999ff; width:70px; height:50px; font-color:aqua;" onclick="http://localhost:8080/">Home</button>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>
